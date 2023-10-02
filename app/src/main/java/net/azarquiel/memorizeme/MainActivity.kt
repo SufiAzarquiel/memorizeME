@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 var idFoto =
                     resources.getIdentifier("pokemon${vPokemonEnJuego[x]}", "drawable", packageName)
                 x++
+                ivPokemon.tag = vPokemonEnJuego[x]
                 ivPokemon.setBackgroundResource(idFoto)
                 ivPokemon.setImageResource(R.drawable.tapa)
                 ivPokemon.setOnClickListener { pokemOnClick() }
@@ -82,6 +83,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         val iv = p0 as ImageView
         iv.setImageResource(android.R.color.transparent)
 
-        
+
     }
 }
